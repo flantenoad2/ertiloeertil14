@@ -220,6 +220,7 @@ h1, h2, h3 {
 }
 
 /* --- START: INTERACTIVE SECTION STYLING (NEW) --- */
+/* Styles for the main sections on hover */
 .doing-section,
 .projects-section,
 .certificates-section,
@@ -266,11 +267,17 @@ section:not(:last-child) {
   padding: 25px;
   border-radius: 16px;
   border: 1px solid var(--border-color);
-  transition: transform 0.3s, box-shadow 0.3s;
+  /* Ensure smooth transition for the new box-shadow */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
 }
+
+/* Enhanced "light up" effect on hover for individual items */
 .service-item:hover, .project-item:hover, .certificate-item:hover, .course-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    /* Vibrant glow effect using electric purple */
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.6), 0 8px 15px rgba(0, 0, 0, 0.4);
+    /* Optional: subtle change to border color to match glow */
+    border-color: rgba(156, 39, 176, 0.4);
 }
 
 .service-icon-box {
