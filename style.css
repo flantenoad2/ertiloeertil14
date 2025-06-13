@@ -127,10 +127,18 @@ h1, h2, h3 {
   align-items: center;
   gap: 15px;
   text-align: left;
+  /* Add transition for smooth hover effects */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .contact-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+/* New hover effect for contact items */
+.contact-item:hover {
+  transform: translateX(5px); /* Move slightly to the right */
+  box-shadow: 0 0 15px rgba(233, 30, 99, 0.5); /* Fuchsia glow */
 }
 
 .icon-box {
