@@ -219,6 +219,31 @@ h1, h2, h3 {
   margin-top: 8px;
 }
 
+/* --- START: INTERACTIVE SECTION STYLING (NEW) --- */
+.doing-section,
+.projects-section,
+.certificates-section,
+.courses-section {
+    padding: 30px;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--bg-color-light);
+    /* Transition the border and shadow for a smooth "light up" effect */
+    transition: border-image 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.doing-section:hover,
+.projects-section:hover,
+.certificates-section:hover,
+.courses-section:hover {
+    /* Apply the vertical gradient to the border on hover */
+    border-image-source: linear-gradient(to bottom, #e91e63, #9c27b0, #ff5722);
+    border-image-slice: 1;
+    /* Add a subtle glow effect using the purple from the gradient */
+    box-shadow: 0 0 25px rgba(156, 39, 176, 0.3);
+}
+/* --- END: INTERACTIVE SECTION STYLING (NEW) --- */
+
 section:not(:last-child) {
   margin-bottom: 40px;
 }
